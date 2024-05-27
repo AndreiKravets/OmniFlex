@@ -18,18 +18,6 @@
         "type": "footer",
         "settings": {
         }
-      },
-      "popup-search": {
-        "type": "popup-search",
-        "settings": {
-          "bg_color": "#FFFFFF",
-          "container_width": 1300
-        }
-      },
-      "cart-drawer": {
-        "type": "cart-drawer",
-        "settings": {
-        }
       }
     },
     "content_for_index": [

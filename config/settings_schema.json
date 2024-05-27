@@ -59,7 +59,7 @@
         "unit": "px",
         "label": "Font size body",
         "default": 16
-      },   
+      },
       {
         "type": "range",
         "id": "font_size_body_tablet",
@@ -69,7 +69,7 @@
         "unit": "px",
         "label": "Font size body tablet",
         "default": 14
-      },   
+      },
       {
         "type": "range",
         "id": "font_size_body_mobile",
@@ -79,187 +79,187 @@
         "unit": "px",
         "label": "Font size body mobile",
         "default": 14
-      },   
+      },
       {
         "type": "range",
         "id": "font_size_h1",
-        "min": 20,
-        "max": 120,
-        "step": 1,
-        "unit": "px",
+        "min": 0.8,
+        "max": 5,
+        "step": 0.1,
+        "unit": "rem",
         "label": "Font size H1",
-        "default": 52
-      },     
+        "default": 2.5
+      },
       {
         "type": "range",
         "id": "font_size_h1_tablet",
-        "min": 20,
-        "max": 120,
-        "step": 1,
-        "unit": "px",
+        "min": 0.8,
+        "max": 5,
+        "step":0.1,
+        "unit": "rem",
         "label": "Font size H1 tablet",
-        "default": 46
-      },     
+        "default": 2.2
+      },
       {
         "type": "range",
         "id": "font_size_h1_mobile",
-        "min": 20,
-        "max": 120,
-        "step": 1,
-        "unit": "px",
+        "min": 0.8,
+        "max": 5,
+        "step":0.1,
+        "unit": "rem",
         "label": "Font size H1 mobile",
-        "default": 36
-      },     
+        "default": 2.2
+      },
       {
         "type": "range",
         "id": "font_size_h2",
-        "min": 20,
-        "max": 120,
-        "step": 1,
-        "unit": "px",
+        "min": 0.8,
+        "max": 5,
+        "step": 0.1,
+        "unit": "rem",
         "label": "Font size H2",
-        "default": 40
-      },     
+        "default": 2.3
+      },
       {
         "type": "range",
         "id": "font_size_h2_tablet",
-        "min": 20,
-        "max": 120,
-        "step": 1,
-        "unit": "px",
+        "min": 0.8,
+        "max": 5,
+        "step": 0.1,
+        "unit": "rem",
         "label": "Font size H2 tablet",
-        "default": 34
-      },     
+        "default": 2.3
+      },
       {
         "type": "range",
         "id": "font_size_h2_mobile",
-        "min": 20,
-        "max": 120,
-        "step": 1,
-        "unit": "px",
+        "min": 0.8,
+        "max": 5,
+        "step": 0.1,
+        "unit": "rem",
         "label": "Font size H2 mobile",
-        "default": 30
-      },     
+        "default": 2.3
+      },
       {
         "type": "range",
         "id": "font_size_h3",
-        "min": 20,
-        "max": 120,
-        "step": 1,
-        "unit": "px",
+        "min": 0.8,
+        "max": 5,
+        "step": 0.1,
+        "unit": "rem",
         "label": "Font size H3",
-        "default": 34
-      },     
+        "default": 2.3
+      },
       {
         "type": "range",
         "id": "font_size_h3_tablet",
-        "min": 10,
-        "max": 110,
-        "step": 1,
-        "unit": "px",
+        "min": 0.8,
+        "max": 5,
+        "step": 0.1,
+        "unit": "rem",
         "label": "Font size H3 tablet",
-        "default": 30
-      },     
+        "default": 2.3
+      },
       {
         "type": "range",
         "id": "font_size_h3_mobile",
-        "min": 10,
-        "max": 110,
-        "step": 1,
-        "unit": "px",
+        "min": 0.8,
+        "max": 5,
+        "step": 0.1,
+        "unit": "rem",
         "label": "Font size H3 mobile",
-        "default": 28
-      },     
+        "default": 2.3
+      },
       {
         "type": "range",
         "id": "font_size_h4",
-        "min": 10,
-        "max": 110,
-        "step": 1,
-        "unit": "px",
+        "min": 0.8,
+        "max": 5,
+        "step": 0.1,
+        "unit": "rem",
         "label": "Font size H4",
-        "default": 30
-      },     
+        "default": 2.3
+      },
       {
         "type": "range",
         "id": "font_size_h4_tablet",
-        "min": 10,
-        "max": 110,
-        "step": 1,
-        "unit": "px",
+        "min": 0.8,
+        "max": 5,
+        "step": 0.1,
+        "unit": "rem",
         "label": "Font size H4 tablet",
-        "default": 26
-      },     
+        "default": 2.3
+      },
       {
         "type": "range",
         "id": "font_size_h4_mobile",
-        "min": 10,
-        "max": 110,
-        "step": 1,
-        "unit": "px",
+        "min": 0.8,
+        "max": 5,
+        "step": 0.1,
+        "unit": "rem",
         "label": "Font size H4 mobile",
-        "default": 22
-      },     
+        "default": 2.3
+      },
       {
         "type": "range",
         "id": "font_size_h5",
-        "min": 10,
-        "max": 110,
-        "step": 1,
-        "unit": "px",
+        "min": 0.8,
+        "max": 5,
+        "step": 0.1,
+        "unit": "rem",
         "label": "Font size H5",
-        "default": 22
-      },     
+        "default": 2.3
+      },
       {
         "type": "range",
         "id": "font_size_h5_tablet",
-        "min": 10,
-        "max": 110,
-        "step": 1,
-        "unit": "px",
+        "min": 0.8,
+        "max": 5,
+        "step": 0.1,
+        "unit": "rem",
         "label": "Font size H5 tablet",
-        "default": 20
-      },     
+        "default": 2.3
+      },
       {
         "type": "range",
         "id": "font_size_h5_mobile",
-        "min": 10,
-        "max": 110,
-        "step": 1,
-        "unit": "px",
+        "min": 0.8,
+        "max": 5,
+        "step": 0.1,
+        "unit": "rem",
         "label": "Font size H5 mobile",
-        "default": 18
-      },     
+        "default": 2.3
+      },
       {
         "type": "range",
         "id": "font_size_h6",
-        "min": 10,
-        "max": 110,
-        "step": 1,
-        "unit": "px",
+        "min": 0.8,
+        "max": 5,
+        "step": 0.1,
+        "unit": "rem",
         "label": "Font size H6",
-        "default": 18
-      },     
+        "default": 2.3
+      },
       {
         "type": "range",
         "id": "font_size_h6_tablet",
-        "min": 10,
-        "max": 110,
-        "step": 1,
-        "unit": "px",
+        "min": 0.8,
+        "max": 5,
+        "step": 0.1,
+        "unit": "rem",
         "label": "Font size H6 tablet",
-        "default": 18
-      },     
+        "default": 2.3
+      },
       {
         "type": "range",
         "id": "font_size_h6_mobile",
-        "min": 10,
-        "max": 110,
-        "step": 1,
-        "unit": "px",
+        "min": 0.8,
+        "max": 5,
+        "step": 0.1,
+        "unit": "rem",
         "label": "Font size H6 mobile",
-        "default": 16
-      },     
+        "default": 2.3
+      },
       {
         "type": "font_picker",
         "id": "font_body",
@@ -305,7 +305,7 @@
         "type": "text",
         "id": "social_tiktok_link",
         "label": "TikTok",
-        "info": "https://tiktok.com/@shopify"
+        "info": "https:\/\/tiktok.com\/@shopify"
       },
       {
         "type": "text",
@@ -323,13 +323,13 @@
         "type": "text",
         "id": "social_tumblr_link",
         "label": "Tumblr",
-        "info": "https://shopify.tumblr.com"
+        "info": "https:\/\/shopify.tumblr.com"
       },
       {
         "type": "text",
         "id": "social_vimeo_link",
         "label": "Vimeo",
-        "info": "https://vimeo.com/shopify"
+        "info": "https:\/\/vimeo.com\/shopify"
       }
     ]
   }

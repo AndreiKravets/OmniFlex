@@ -1,5 +1,7 @@
 @import "../node_modules/normalize.css/normalize";
-
+*{
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 .hidden{
 	overflow: hidden;
 }

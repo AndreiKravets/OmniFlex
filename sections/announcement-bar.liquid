@@ -1,0 +1,117 @@
+ <div class="container d-flex">
+        <div class="social-icons">
+
+        </div>
+        <div class="text-center">
+           {% for block in section.blocks %}
+            <p class="d-inline-block">{{ block.settings.text }}</p>
+            {% endfor %}
+        </div>
+        <div>
+            <div>
+                <div class="dropdown">
+                    <button class="btn btn-link dropdown-toggle fw-semibold text-uppercase ls-1 p-0 text-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">USD
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end py-5" style="min-width: unset">
+                        <a class="dropdown-item py-1" href="#">EUR</a>
+                        <a class="dropdown-item py-1" href="#">GBP</a>
+                        <a class="dropdown-item py-1" href="#">JPY</a>
+                        <a class="dropdown-item py-1" href="#">AUD</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% schema %}
+{
+  "name": "Announcement bar",
+  "tag": "aside",
+  "max_blocks": 5,
+  "blocks": [
+    {
+      "type": "message",
+      "name": "Message",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Announce something here"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Social media",
+      "info": "This will only show in the drawer navigation."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social_media",
+      "label": "Show social media",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Language selector",
+      "info": "To add a language, go to your [language settings.](/admin/settings/languages)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_locale_selector",
+      "label": "Show language selector",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Country/region selector"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_country_selector",
+      "label": "Show country/region selector",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_country_flag",
+      "label": "Show country flag",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_country_name",
+      "label": "Show country name",
+      "default": false
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Colors",
+      "info": "Gradient replaces solid colors when set."
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background"
+    },
+    {
+      "type": "color_background",
+      "id": "background_gradient",
+      "label": "Background gradient"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text"
+    }
+  ]
+}
+{% endschema %}
