@@ -1,6 +1,6 @@
  <div class="container d-flex">
         <div class="social-icons">
-
+         {% render 'social-links' %}
         </div>
         <div class="text-center">
            {% for block in section.blocks %}
@@ -10,13 +10,13 @@
         <div>
             <div>
                 <div class="dropdown">
-                    <button class="btn btn-link dropdown-toggle fw-semibold text-uppercase ls-1 p-0 text-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">USD
+                    <button class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">USD
                     </button>
-                    <div class="dropdown-menu dropdown-menu-end py-5" style="min-width: unset">
-                        <a class="dropdown-item py-1" href="#">EUR</a>
-                        <a class="dropdown-item py-1" href="#">GBP</a>
-                        <a class="dropdown-item py-1" href="#">JPY</a>
-                        <a class="dropdown-item py-1" href="#">AUD</a>
+                    <div class="dropdown-menu dropdown-menu-end" style="min-width: unset">
+                        <a class="dropdown-item" href="#">EUR</a>
+                        <a class="dropdown-item" href="#">GBP</a>
+                        <a class="dropdown-item" href="#">JPY</a>
+                        <a class="dropdown-item" href="#">AUD</a>
                     </div>
                 </div>
             </div>
@@ -27,29 +27,24 @@
 {
   "name": "Announcement bar",
   "tag": "aside",
-  "max_blocks": 5,
-  "blocks": [
+  "settings": [
     {
-      "type": "message",
-      "name": "Message",
-      "settings": [
-        {
-          "type": "text",
-          "id": "text",
-          "label": "Text",
-          "default": "Announce something here"
-        },
-        {
-          "type": "url",
-          "id": "url",
-          "label": "Link"
-        }
-      ]
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text"
     },
     {
       "type": "header",
-      "content": "Social media",
-      "info": "This will only show in the drawer navigation."
+      "content": "Social media"
     },
     {
       "type": "checkbox",
@@ -90,27 +85,25 @@
       "label": "Show country name",
       "default": false
     }
-  ],
-  "settings": [
+    ],
+  "max_blocks": 5,
+  "blocks": [
     {
-      "type": "header",
-      "content": "Colors",
-      "info": "Gradient replaces solid colors when set."
-    },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "Background"
-    },
-    {
-      "type": "color_background",
-      "id": "background_gradient",
-      "label": "Background gradient"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Text"
+      "type": "message",
+      "name": "Message",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Announce something here"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link"
+        }
+      ]
     }
   ]
 }

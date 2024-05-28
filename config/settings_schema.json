@@ -281,55 +281,92 @@
     "settings": [
       {
         "type": "header",
-        "content": "Social accounts"
+        "content": "Accounts"
       },
       {
-        "type": "text",
-        "id": "social_facebook_link",
-        "label": "Facebook",
-        "info": "https:\/\/facebook.com\/shopify"
+        "type": "url",
+        "id": "social_facebook",
+        "label": "Facebook"
       },
       {
-        "type": "text",
-        "id": "social_instagram_link",
-        "label": "Instagram",
-        "info": "https:\/\/instagram.com\/shopify"
+        "type": "url",
+        "id": "social_twitter",
+        "label": "Twitter"
       },
       {
-        "type": "text",
-        "id": "social_youtube_link",
-        "label": "YouTube",
-        "info": "https:\/\/www.youtube.com\/shopify"
+        "type": "url",
+        "id": "social_threads",
+        "label": "Threads"
       },
       {
-        "type": "text",
-        "id": "social_tiktok_link",
-        "label": "TikTok",
-        "info": "https:\/\/tiktok.com\/@shopify"
+        "type": "url",
+        "id": "social_pinterest",
+        "label": "Pinterest"
       },
       {
-        "type": "text",
-        "id": "social_twitter_link",
-        "label": "Twitter",
-        "info": "https:\/\/twitter.com\/shopify"
+        "type": "url",
+        "id": "social_instagram",
+        "label": "Instagram"
       },
       {
-        "type": "text",
-        "id": "social_pinterest_link",
-        "label": "Pinterest",
-        "info": "https:\/\/pinterest.com\/shopify"
+        "type": "url",
+        "id": "social_vimeo",
+        "label": "Vimeo"
       },
       {
-        "type": "text",
-        "id": "social_tumblr_link",
-        "label": "Tumblr",
-        "info": "https:\/\/shopify.tumblr.com"
+        "type": "url",
+        "id": "social_whatsapp",
+        "label": "WhatsApp"
       },
       {
-        "type": "text",
-        "id": "social_vimeo_link",
-        "label": "Vimeo",
-        "info": "https:\/\/vimeo.com\/shopify"
+        "type": "url",
+        "id": "social_tumblr",
+        "label": "Tumblr"
+      },
+      {
+        "type": "url",
+        "id": "social_youtube",
+        "label": "YouTube"
+      },
+      {
+        "type": "url",
+        "id": "social_tiktok",
+        "label": "TikTok"
+      },
+      {
+        "type": "url",
+        "id": "social_linkedin",
+        "label": "LinkedIn"
+      },
+      {
+        "type": "url",
+        "id": "social_snapchat",
+        "label": "Snapchat"
+      },
+      {
+        "type": "url",
+        "id": "social_fancy",
+        "label": "Fancy"
+      },
+      {
+        "type": "url",
+        "id": "social_wechat",
+        "label": "WeChat"
+      },
+      {
+        "type": "url",
+        "id": "social_reddit",
+        "label": "Reddit"
+      },
+      {
+        "type": "url",
+        "id": "social_line",
+        "label": "LINE"
+      },
+      {
+        "type": "url",
+        "id": "social_spotify",
+        "label": "Spotify"
       }
     ]
   }
