@@ -4,28 +4,37 @@
   "sections": {
     "announcement-bar": {
       "type": "announcement-bar",
-      "disabled": true,
+      "blocks": {
+        "message_8zG7YK": {
+          "type": "message",
+          "settings": {
+            "text": "Free shipping on all U.S. orders $50+",
+            "url": ""
+          }
+        }
+      },
       "block_order": [
-        "message"
+        "message_8zG7YK"
       ],
       "settings": {
-        "enable_sticky": false,
-        "text_size": "text-xs",
-        "navigation_mode": "scrolling",
-        "scrolling_speed": 10,
-        "background": "#1a1a1a",
-        "background_gradient": "",
-        "text_color": "#ffffff"
+        "bg-color": "bg-primary text-primary",
+        "show_social_media": true,
+        "show_currency_selector": true
       }
     },
     "header": {
       "type": "header",
       "settings": {
         "enable_sticky": true,
-        "hide_on_scroll": true,
+        "header_layout": "header-1",
+        "shadow": "shadow-none",
+        "enable_search": true,
+        "bg-color": "bg-body",
         "logo": "{{shop.brand.logo}}",
         "logo_max_width": 120,
-        "logo_mobile_max_width": 100
+        "logo_mobile_max_width": 100,
+        "menu": "main-menu",
+        "secondary_menu": "secondary-menu"
       }
     }
   },

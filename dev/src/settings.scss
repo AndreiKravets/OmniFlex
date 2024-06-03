@@ -1,0 +1,133 @@
+body, a {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  color: var(--text-primary);
+  background-color: var(--bg-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+}
+
+.btn-primary {
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+}
+
+.btn-secondary {
+  background-color: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+}
+
+// Media queries for tablet and mobile
+
+@media (max-width: 768px) {
+  body {
+    font-size: var(--font-size-body-tablet);
+  }
+  h1 {
+    font-size: var(--font-size-h1-tablet);
+  }
+  h2 {
+    font-size: var(--font-size-h2-tablet);
+  }
+  h3 {
+    font-size: var(--font-size-h3-tablet);
+  }
+  h4 {
+    font-size: var(--font-size-h4-tablet);
+  }
+  h5 {
+    font-size: var(--font-size-h5-tablet);
+  }
+  h6 {
+    font-size: var(--font-size-h6-tablet);
+  }
+  // ... other styles
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: var(--font-size-body-mobile);
+  }
+  h1 {
+    font-size: var(--font-size-h1-mobile);
+  }
+  h2 {
+    font-size: var(--font-size-h2-mobile);
+  }
+  h3 {
+    font-size: var(--font-size-h3-mobile);
+  }
+  h4 {
+    font-size: var(--font-size-h4-mobile);
+  }
+  h5 {
+    font-size: var(--font-size-h5-mobile);
+  }
+  h6 {
+    font-size: var(--font-size-h6-mobile);
+  }
+}
+
+.bg-body {
+  background-color: var(--bg-body);
+}
+
+.bg-primary {
+  background-color: var(--bg-primary);
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.bg-tertiary {
+  background-color: var(--bg-tertiary);
+}
+
+.text-primary {
+  color: var(--text-primary);
+  a{
+    color: var(--text-primary);
+  }
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+  a{
+    color: var(--text-secondary);
+  }
+}
+
+.text-tertiary {
+  color: var(--text-tertiary);
+    a{
+        color: var(--text-tertiary);
+    }
+}

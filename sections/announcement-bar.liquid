@@ -1,28 +1,30 @@
- <div class="container d-flex">
-        <div class="social-icons">
-         {% render 'social-links' %}
-        </div>
-        <div class="text-center">
-           {% for block in section.blocks %}
-            <p class="d-inline-block">{{ block.settings.text }}</p>
-            {% endfor %}
-        </div>
-        <div>
-            <div>
-                <div class="dropdown">
-                    <button class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">USD
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-end" style="min-width: unset">
-                        <a class="dropdown-item" href="#">EUR</a>
-                        <a class="dropdown-item" href="#">GBP</a>
-                        <a class="dropdown-item" href="#">JPY</a>
-                        <a class="dropdown-item" href="#">AUD</a>
+<div class="{{ section.settings.bg-color }}">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="col">
+                {% if section.settings.show_social_media == true %}
+                    <div class="social-icons">
+                        {% render 'social-links' %}
                     </div>
-                </div>
+                {% endif %}
+            </div>
+            <div class="text-center col">
+                {% for block in section.blocks %}
+                    <p class="d-inline-block">{{ block.settings.text }}</p>
+                {% endfor %}
+            </div>
+            <div class="col">
+                {% if section.settings.show_currency_selector == true %}
+                  <select id="currency-switcher">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                  </select>
+                {% endif %}
             </div>
         </div>
     </div>
-
+</div>
 {% schema %}
 {
   "name": "Announcement bar",
@@ -33,14 +35,27 @@
       "content": "Colors"
     },
     {
-      "type": "color",
-      "id": "background",
-      "label": "Background"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Text"
+      "type": "select",
+      "id": "bg-color",
+      "label": "Background color",
+      "options": [
+        {
+          "value": "bg-body",
+          "label": "Body"
+        },
+        {
+          "value": "bg-primary text-primary",
+          "label": "Primary"
+        },
+        {
+          "value": "bg-secondary text-secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "bg-tertiary text-tertiary",
+          "label": "Tertiary"
+        }
+      ]
     },
     {
       "type": "header",
@@ -49,43 +64,21 @@
     {
       "type": "checkbox",
       "id": "show_social_media",
-      "label": "Show social media",
+      "label": "Enable social media",
       "default": true
     },
     {
       "type": "header",
-      "content": "Language selector",
+      "content": "Currency selector",
       "info": "To add a language, go to your [language settings.](/admin/settings/languages)"
     },
     {
       "type": "checkbox",
-      "id": "show_locale_selector",
-      "label": "Show language selector",
+      "id": "show_currency_selector",
+      "label": "Enable currency selector",
       "default": true
-    },
-    {
-      "type": "header",
-      "content": "Country/region selector"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_country_selector",
-      "label": "Show country/region selector",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_country_flag",
-      "label": "Show country flag",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_country_name",
-      "label": "Show country name",
-      "default": false
     }
-    ],
+  ],
   "max_blocks": 5,
   "blocks": [
     {

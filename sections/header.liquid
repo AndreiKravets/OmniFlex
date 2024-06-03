@@ -1,6 +1,72 @@
-<header>
+<div class="header {% if section.settings.enable_sticky %} sticky-header {% endif %} {{ section.settings.header_layout }} {{ section.settings.shadow }} {{ section.settings.bg-color }}">
+    <div class="container">
+        <div class="row justify-content-between">
+          {% if section.settings.header_layout == 'header-3' or section.settings.header_layout == 'header-4' %}
+            <a class="header__search-toggle" aria-label="Toggle search">
+              {% render 'icon' with 'search' %}
+            </a>
+          {% endif %}
+          {% unless section.settings.header_layout == 'header-4' %}
+            <div class="d-flex">
+                <nav class="header__menu">
+                    {% include 'main-menu', menu: section.settings.menu %}
+                </nav>
+              {% if section.settings.header_layout == 'header-3' %}
+                <div class="header__logo">
+                  <a href="/" class="header__logo-link">
+                    {% if section.settings.logo != blank %}
+                      <img src="{{ section.settings.logo | img_url: 'master' }}" alt="{{ shop.name }}"
+                           style="max-width: {{ section.settings.logo_max_width }}px;">
+                    {% else %}
+                      {{ shop.name }}
+                    {% endif %}
+                  </a>
+                </div>
+              {% endif %}
+                <nav class="header__menu">
+                    {% include 'main-menu', menu: section.settings.secondary_menu %}
+                </nav>
+            </div>
+            {% endunless %}
+          {% unless section.settings.header_layout == 'header-3' %}
+            <div class="header__logo {% if section.settings.header_layout == 'header-1' %} order-first {% endif %}">
+                <a href="/" class="header__logo-link">
+                    {% if section.settings.logo != blank %}
+                        <img src="{{ section.settings.logo | img_url: 'master' }}" alt="{{ shop.name }}"
+                             style="max-width: {{ section.settings.logo_max_width }}px;">
+                    {% else %}
+                        {{ shop.name }}
+                    {% endif %}
+                </a>
+            </div>
+            {% endunless %}
+            <div class="header__account order-last">
+              {% if section.settings.header_layout == 'header-1' or section.settings.header_layout == 'header-2' %}
+                <a class="header__search-toggle" aria-label="Toggle search">
+                    {% render 'icon' with 'search' %}
+                </a>
+              {% endif %}
+                <a href="/account" class="header__account-link">
+                    {% render 'icon' with 'account' %}
+                </a>
+                <a href="/cart" class="header__cart-link">
+                    {% render 'icon' with 'cart' %}
+                </a>
+            </div>
+        </div>
+       {% if section.settings.header_layout == 'header-4' %}
 
-</header>
+      <div class="row justify-content-center">
+        <nav class="header__menu">
+          {% include 'main-menu', menu: section.settings.menu %}
+        </nav>
+        <nav class="header__menu">
+          {% include 'main-menu', menu: section.settings.secondary_menu %}
+        </nav>
+      </div>
+      {% endif %}
+    </div>
+</div>
 
 
 {% schema %}
@@ -10,10 +76,89 @@
   "tag": "header",
   "settings": [
     {
+      "type": "header",
+      "content": "General settings"
+    },
+    {
       "type": "checkbox",
       "id": "enable_sticky",
       "label": "Enable sticky header",
       "default": true
+    },
+    {
+      "type": "select",
+      "id": "header_layout",
+      "label": "Header layout",
+      "options": [
+        {
+          "value": "header-1",
+          "label": "Header 1"
+        },
+        {
+          "value": "header-2",
+          "label": "Header 2"
+        },
+        {
+          "value": "header-3",
+          "label": "Header 3"
+        },
+        {
+          "value": "header-4",
+          "label": "Header 4"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "shadow",
+      "label": "Shadow",
+      "options": [
+        {
+          "value": "shadow-none",
+          "label": "None"
+        },
+        {
+          "value": "shadow-sm",
+          "label": "Small"
+        },
+        {
+          "value": "shadow",
+          "label": "Medium"
+        },
+        {
+          "value": "shadow-lg",
+          "label": "Large"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_search",
+      "label": "Enable search",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "bg-color",
+      "label": "Background color",
+      "options": [
+        {
+          "value": "bg-body",
+          "label": "Body"
+        },
+        {
+          "value": "bg-primary text-primary",
+          "label": "Primary"
+        },
+        {
+          "value": "bg-secondary text-secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "bg-tertiary text-tertiary",
+          "label": "Tertiary"
+        }
+      ]
     },
     {
       "type": "header",
@@ -58,39 +203,7 @@
     {
       "type": "link_list",
       "id": "secondary_menu",
-      "label": "Secondary menu",
-      "info": "This menu won't show dropdown items. For best results, limit the number of links to 1 or 2."
-    },
-    {
-      "type": "header",
-      "content": "Desktop"
-    },
-    {
-      "type": "header",
-      "content": "Transparent header",
-      "info": "Add a section on first position which allows transparent header such as slideshow or image with text overlay."
-    },
-    {
-      "type": "color",
-      "id": "transparent_header_text_color",
-      "label": "Text color",
-      "default": "#ffffff"
-    },
-    {
-      "type": "image_picker",
-      "id": "transparent_logo",
-      "label": "Logo image",
-      "info": "Use the same dimensions as main logo."
-    },
-    {
-      "type": "range",
-      "id": "background_opacity",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "%",
-      "label": "Background opacity",
-      "default": 1
+      "label": "Secondary menu"
     }
   ],
   "blocks": [

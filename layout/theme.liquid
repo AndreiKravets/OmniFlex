@@ -14,13 +14,6 @@
         href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
 
-    {%- unless settings.font_body.system? and settings.font_heading.system? -%}
-      <link
-        rel="preconnect"
-        href="https://fonts.shopifycdn.com"
-        crossorigin>
-    {%- endunless -%}
-
     <title>
       {{ page_title }}
       {%- if current_tags %}
@@ -39,31 +32,8 @@
 
     {{ content_for_header }}
 
-    {%- unless settings.font_body.system? -%}
-      <link
-        rel="preload"
-        as="font"
-        href="{{ settings.font_body | font_url }}"
-        type="font/woff2"
-        crossorigin>
-    {%- endunless -%}
-    {%- unless settings.font_heading.system? -%}
-      <link
-        rel="preload"
-        as="font"
-        href="{{ settings.font_heading | font_url }}"
-        type="font/woff2"
-        crossorigin>
-    {%- endunless -%}
-
-    <script>
-      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-      if (Shopify.designMode) {
-        document.documentElement.classList.add('shopify-design-mode');
-      }
-    </script>
-
     {% render 'css-variables' %}
+    {{ 'settings.css' | asset_url | stylesheet_tag }}
     {{ 'global.css' | asset_url | stylesheet_tag }}
 
     {% render 'js-variables' %}
@@ -71,7 +41,9 @@
   </head>
 
   <body>
-  {%- sections 'header-group' -%}
+  <header id="header" class="header header-sticky">
+     {%- sections 'header-group' -%}
+  </header>
 
     <main
       id="MainContent"

@@ -23,27 +23,117 @@
     "settings": [
       {
         "type": "color",
-        "id": "color_background",
-        "label": "Background color",
-        "default": "#FFFFFF"
+        "id": "bg_body",
+        "label": "Body Background Color",
+        "default": "#ffffff"
       },
       {
         "type": "color",
-        "id": "color_text",
-        "label": "Text color",
-        "default": "#000000"
+        "id": "bg_primary",
+        "label": "Primary Background Color",
+        "default": "#ffffff"
       },
       {
         "type": "color",
-        "id": "color_heading",
-        "label": "Headings color",
-        "default": "#000000"
+        "id": "bg_secondary",
+        "label": "Secondary Background Color",
+        "default": "#f0f0f0"
       },
       {
         "type": "color",
-        "id": "color_link",
-        "label": "Links color",
-        "default": "#000000"
+        "id": "bg_tertiary",
+        "label": "Tertiary Background Color",
+        "default": "#e0e0e0"
+      },
+      {
+        "type": "color",
+        "id": "text_primary",
+        "label": "Primary Text Color",
+        "default": "#333333"
+      },
+      {
+        "type": "color",
+        "id": "text_secondary",
+        "label": "Secondary Text Color",
+        "default": "#666666"
+      },
+      {
+        "type": "color",
+        "id": "text_tertiary",
+        "label": "Tertiary Text Color",
+        "default": "#999999"
+      },
+      {
+        "type": "color",
+        "id": "accent_primary",
+        "label": "Primary Accent Color",
+        "default": "#ff5733"
+      },
+      {
+        "type": "color",
+        "id": "accent_secondary",
+        "label": "Secondary Accent Color",
+        "default": "#c70039"
+      },
+      {
+        "type": "color",
+        "id": "btn_primary_bg",
+        "label": "Primary Button Background Color",
+        "default": "#007bff"
+      },
+      {
+        "type": "color",
+        "id": "btn_primary_text",
+        "label": "Primary Button Text Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "btn_secondary_bg",
+        "label": "Secondary Button Background Color",
+        "default": "#6c757d"
+      },
+      {
+        "type": "color",
+        "id": "btn_secondary_text",
+        "label": "Secondary Button Text Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "success",
+        "label": "Success Color",
+        "default": "#28a745"
+      },
+      {
+        "type": "color",
+        "id": "error",
+        "label": "Error Color",
+        "default": "#dc3545"
+      },
+      {
+        "type": "color",
+        "id": "warning",
+        "label": "Warning Color",
+        "default": "#ffc107"
+      },
+      {
+        "type": "color",
+        "id": "info",
+        "label": "Info Color",
+        "default": "#17a2b8"
+      },
+      {
+        "type": "color",
+        "id": "neutral_light",
+        "label": "Neutral Light Color",
+        "default": "#f8f9fa"
+      },
+      {
+        "type": "color",
+        "id": "neutral_dark",
+        "label": "Neutral Dark Color",
+        "default": "#343a40"
       }
     ]
   },

@@ -1,7 +1,15 @@
 {
   "current": {
+    "bg_body": "#ffffff",
+    "text_primary": "#000000",
+    "text_tertiary": "#ffffff",
     "font_body": "dm_sans_n4",
     "font_heading": "josefin_slab_n4",
+    "social_facebook": "https:\/\/www.facebook.com\/",
+    "social_twitter": "https:\/\/x.com",
+    "social_pinterest": "https:\/\/www.pinterest.com\/",
+    "social_instagram": "https:\/\/www.instagram.com\/",
+    "social_youtube": "https:\/\/www.youtube.com\/",
     "header_menu_position": "center",
     "menu_font_heading": "dm_sans_n4",
     "header_logo": "shopify:\/\/shop_images\/isolated-monochrome-black.svg",
