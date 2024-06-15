@@ -1,19 +1,21 @@
+{{ 'announcement-bar.css' | asset_url | stylesheet_tag }}
+
 <div class="{{ section.settings.bg-color }}">
     <div class="container">
-        <div class="row justify-content-between align-items-center">
-            <div class="col">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="w-50">
                 {% if section.settings.show_social_media == true %}
                     <div class="social-icons">
                         {% render 'social-links' %}
                     </div>
                 {% endif %}
             </div>
-            <div class="text-center col">
+            <div class="text-center w-100">
                 {% for block in section.blocks %}
                     <p class="d-inline-block">{{ block.settings.text }}</p>
                 {% endfor %}
             </div>
-            <div class="col">
+            <div class="w-50 d-flex justify-content-end">
                 {% if section.settings.show_currency_selector == true %}
                   <select id="currency-switcher">
                     <option value="USD">USD</option>
@@ -28,7 +30,7 @@
 {% schema %}
 {
   "name": "Announcement bar",
-  "tag": "aside",
+  "tag": "div",
   "settings": [
     {
       "type": "header",
