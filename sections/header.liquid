@@ -2,13 +2,12 @@
 
 <style>
   #shopify-section-{{ section.id }} .main-header {
-    padding: {{ section.settings.header_padding }}px 0;
   }
 </style>
 
 <div class="main-header {% if section.settings.enable_sticky %} sticky-header {% endif %} {{ section.settings.header_layout }} {{ section.settings.shadow }} {{ section.settings.bg-color }}">
     <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex justify-content-between align-items-center {% if section.settings.header_layout == 'header-4' %} pt-{{ section.settings.header_padding }} {% endif %}">
           <div class="w-50">
             {% if section.settings.header_layout == 'header-3' or section.settings.header_layout == 'header-4' %}
                 <a class="header__search-toggle">
@@ -29,8 +28,8 @@
             {% endif %}
             {% if section.settings.header_layout == 'header-2' %}
              <nav class="header__menu {{ section.settings.text_transform }}">
-                  {% include 'main-menu', menu: section.settings.menu %}
-                  {% include 'main-menu', menu: section.settings.secondary_menu %}
+                  {% include 'main-menu', menu: section.settings.menu, megamenu: section.blocks %}
+                  {% include 'main-menu', menu: section.settings.secondary_menu, megamenu: section.blocks %}
              </nav>
             {% endif %}
           </div>
@@ -38,7 +37,7 @@
           <div class="w-100 d-flex justify-content-center">
             {% unless section.settings.header_layout == 'header-4' or section.settings.header_layout == 'header-2' %}
                 <nav class="header__menu {{ section.settings.text_transform }}">
-                  {% include 'main-menu', menu: section.settings.menu %}
+                  {% include 'main-menu', menu: section.settings.menu, megamenu: section.blocks %}
                 {% if section.settings.header_layout == 'header-3' %}
                   <div class="header__logo">
                     <a href="/" class="header__logo-link">
@@ -51,7 +50,7 @@
                     </a>
                   </div>
                 {% endif %}
-                  {% include 'main-menu', menu: section.settings.secondary_menu %}
+                  {% include 'main-menu', menu: section.settings.secondary_menu, megamenu: section.blocks %}
                 </nav>
             {% endunless %}
             {% if section.settings.header_layout == 'header-4' or section.settings.header_layout == 'header-2'%}
@@ -85,10 +84,10 @@
 
       {% if section.settings.header_layout == 'header-4' %}
 
-        <div class="d-flex justify-content-center mt-7">
+        <div class="d-flex justify-content-center">
           <nav class="header__menu {{ section.settings.text_transform }}">
-            {% include 'main-menu', menu: section.settings.menu %}
-            {% include 'main-menu', menu: section.settings.secondary_menu %}
+            {% include 'main-menu', menu: section.settings.menu, megamenu: section.blocks, settings: section.settings %}
+            {% include 'main-menu', menu: section.settings.secondary_menu, megamenu: section.blocks, settings: section.settings %}
           </nav>
         </div>
       {% endif %}
@@ -137,12 +136,12 @@
     {
     "type": "range",
     "id": "header_padding",
-    "min": 5,
-    "max": 40,
+    "min": 4,
+    "max": 14,
     "step": 1,
     "unit": "px",
     "label": "Header padding",
-    "default": 20
+    "default": 7
     },
     {
     "type": "select",
@@ -276,6 +275,15 @@
     "id": "menu_item",
     "label": "Menu item",
     "info": "Enter menu item to apply a mega menu dropdown."
+    },
+    {
+    "type": "header",
+    "content": "Navigation"
+    },
+    {
+    "type": "link_list",
+    "id": "mega_menu_item",
+    "label": "Mega menu item"
     },
     {
     "type": "header",

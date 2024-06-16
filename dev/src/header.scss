@@ -11,49 +11,56 @@
     &.header-4{
 
     }
+  .main-header{
+    position: relative;
+  }
   .header__menu{
    display: flex;
-    .menu{
+    .main-menu{
       &:first-child{
         margin-right: 10px;
       }
       &:last-child{
         margin-left: 10px;
       }
-    }
-    li{
-      margin-left: 20px;
-      position: relative;
-      &:first-child{
-        margin-left: 0;
-      }
-      ul{
-        display: none;
-        position: absolute;
-        text-transform: initial;
-        top: 100%;
-        left: 0;
-        background-color: #fff;
-        padding: 10px;
-        box-shadow: 0 0 10px rgba(0,0,0,.1);
-        li{
+      &>li{
+        margin-left: 20px;
+        position: static;
+        &:first-child{
           margin-left: 0;
-          a{
-            display: block;
-            padding: 10px 0;
-            color: #333;
-            &:hover{
-              color: #f00;
-            }
+        }
+      }
+      .main-menu-link{
+        .dropdown-menu {
+          transition: all .3s ease-in-out;
+          box-shadow: 0 0.5rem 1rem rgb(237 237 237);
+          top: 120%;
+          display: block;
+          pointer-events: none;
+          visibility: hidden;
+          opacity: 0;
+          position: absolute;
+
+          &:before {
+            content: "";
+            position: absolute;
+            height: 2px;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+          }
+        }
+        &:hover {
+          > .dropdown-menu {
+            top: 100%;
+            pointer-events: all;
+            visibility: visible;
+            opacity: 1;
           }
         }
       }
-        &:hover{
-            ul{
-            display: block;
-            }
-        }
     }
+
   }
   .header__search-toggle{
 

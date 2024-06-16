@@ -1,14 +1,47 @@
-<ul class="menu d-flex">
+<ul class="main-menu d-flex">
     {% for link in menu.links %}
-        <li class="menu-link">
+        <li class="main-menu-link py-{{ settings.header_padding }}">
             <a href="{{ link.url }}">{{ link.title }}</a>
 
-            {% if link.links.size > 0 %}
-                <ul class="menu dropdown-child">
+            {% assign submenu = true %}
+
+            {% for megamenu_item in megamenu %}
+                {% if megamenu_item.settings.menu_item == link.title %}
+                    {% assign submenu = false %}
+                    <div class="dropdown-menu w-100 start-0 {{ settings.bg-color }}">
+                        <div class="d-flex justify-content-evenly">
+                            {% for link in megamenu_item.settings.mega_menu_item.links %}
+                                <div class="col">
+                                    <a href="{{ link.url }}">{{ link.title }}</a>
+                                    <ul>
+                                        {% for child_link in link.links %}
+                                            <li class="menu-link">
+                                                <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+                                                {% if child_link.links.size > 0 %}
+                                                    <ul class="menu dropdown-grandchild">
+                                                        {% for grandchild_link in child_link.links %}
+                                                            <li class="menu-link">
+                                                                <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                                                            </li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                {% endif %}
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                        {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+            {% if link.links.size > 0 and submenu == true %}
+                <div class="dropdown-menu {{ settings.bg-color }}">
+                    <ul>
                     {% for child_link in link.links %}
                         <li class="menu-link">
                             <a href="{{ child_link.url }}">{{ child_link.title }}</a>
-
                             {% if child_link.links.size > 0 %}
                                 <ul class="menu dropdown-grandchild">
                                     {% for grandchild_link in child_link.links %}
@@ -20,7 +53,8 @@
                             {% endif %}
                         </li>
                     {% endfor %}
-                </ul>
+                    </ul>
+                </div>
             {% endif %}
         </li>
     {% endfor %}
